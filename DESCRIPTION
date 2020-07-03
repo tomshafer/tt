@@ -1,0 +1,11 @@
+Package: tshfr
+Title: A collection of R tools for data science and other analysis.
+Version: 0.0.0.9000
+Authors@R: 
+  person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
