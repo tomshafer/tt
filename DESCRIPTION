@@ -1,6 +1,6 @@
 Package: tshfr
 Title: R Tools for Data Science Work
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
   person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
 Description: A collection of R tools for data science and other analysis.
