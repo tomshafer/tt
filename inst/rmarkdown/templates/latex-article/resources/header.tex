@@ -1,0 +1,31 @@
+
+% Make code a bit smaller
+\ifdef{\DefineVerbatimEnvironment}{
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{
+    commandchars=\\\{\},%
+    fontsize=\small
+  }
+}{}
+
+% Better title: https://tex.stackexchange.com/a/216121/5688
+% - Bold font
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\bfseries\LARGE \@title \par}%
+    \vskip 1.5em%
+    {\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother

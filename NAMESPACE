@@ -2,3 +2,4 @@
 
 export(setdiff3)
 export(table_na)
+export(ts_pdf_document)

@@ -1,6 +1,6 @@
 Package: tshfr
 Title: R Tools for Data Science Work
-Version: 0.0.0.9001
+Version: 0.0.1
 Authors@R: 
   person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
 Description: A collection of R tools for data science and other analysis.
@@ -8,6 +8,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Suggests: 
-    testthat
+    testthat,
+    bookdown

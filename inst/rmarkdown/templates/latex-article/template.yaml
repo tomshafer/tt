@@ -1,0 +1,5 @@
+name: LaTeX Article
+description: |
+  Compile a PDF document using a customized version
+  of the LaTeX article class.
+create_dir: FALSE
