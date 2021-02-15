@@ -26,7 +26,7 @@ ts_pdf_document = function(...) {
     dots[["includes"]][["in_header"]],
     system.file(
       "rmarkdown", "templates", "latex-article", "resources", "header.tex",
-      package = "tshfr"
+      package = "tt"
     )
   )
 

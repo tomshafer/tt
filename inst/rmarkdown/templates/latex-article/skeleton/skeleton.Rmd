@@ -6,7 +6,7 @@ date: \today
 abstract: 
 
 # Knitr/bookdown options
-output: tshfr::ts_pdf_document
+output: tt::ts_pdf_document
 
 # LaTeX options
 fontsize: 11pt

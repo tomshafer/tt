@@ -1,4 +1,4 @@
 library(testthat)
-library(tshfr)
+library(tt)
 
-test_check("tshfr")
+test_check("tt")
