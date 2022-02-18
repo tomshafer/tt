@@ -1,5 +1,9 @@
 # R Utilities
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/tomshafer/tt/workflows/R-CMD-check/badge.svg)](https://github.com/tomshafer/tt/actions)
+<!-- badges: end -->
+
 This package bundles up a collection of R tools for data science
 and other analysis, including utility functions, PDF templates,
 and [ggplot2](https://ggplot2.tidyverse.org) themes. Some of
