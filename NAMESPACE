@@ -2,4 +2,5 @@
 
 export(setdiff3)
 export(table_na)
+export(theme_tmth)
 export(ts_pdf_document)

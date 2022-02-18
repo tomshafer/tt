@@ -1,15 +1,19 @@
 # In progress
 
+- Added ggplot2 theme `theme_tmth()` that, along with'
+  `lemon::coord_capped_cart()`, reproduces key elements of the style
+  advocated for in the book _Trees, maps, and theorems_.
+
 # tt 0.0.1
 
--   Added `ts_pdf_document()` and a "LaTeX Article" R Markdown
-    template to simplify PDF creation.
+- Added `ts_pdf_document()` and a "LaTeX Article" R Markdown template
+  to simplify PDF creation.
 
 # tt 0.0.0.9001
 
--   Added `setdiff3()` and `table_na()` functions.
+- Added `setdiff3()` and `table_na()` functions.
 
 # tt 0.0.0.9000
 
--   Added a `NEWS.md` file to track changes to the package.
--   Added a `REAMDE.md` file.
+- Added a `NEWS.md` file to track changes to the package.
+- Added a `REAMDE.md` file.

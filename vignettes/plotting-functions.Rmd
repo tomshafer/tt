@@ -1,0 +1,35 @@
+---
+title: "Plotting Functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Plotting Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tt)
+library(ggplot2)
+library(lemon)
+```
+
+```{r}
+data(mtcars)
+head(mtcars)
+```
+
+```{r}
+ggplot(mtcars) +
+  geom_point(aes(wt, mpg)) +
+  scale_x_continuous(limits = c(1,6), breaks=seq(1,6)) + 
+  scale_y_continuous(limits = c(10,35)) + 
+  theme_tmth() + 
+  coord_capped_cart(left = "both", bottom="both")
+```
