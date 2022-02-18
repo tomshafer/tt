@@ -1,8 +1,10 @@
-# In progress
+# tt 0.1.0
 
 - Added ggplot2 theme `theme_tmth()` that, along with'
   `lemon::coord_capped_cart()`, reproduces key elements of the style
   advocated for in the book _Trees, maps, and theorems_.
+- Added a vignette demonstrting plotting.
+- (Apparently, in the past) updated RMarkdown template.
 
 # tt 0.0.1
 
