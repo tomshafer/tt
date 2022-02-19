@@ -1,3 +1,7 @@
+# tt 0.1.1
+
+- Fix `theme_tmth()` docs to remove bad ggplot2 link.
+
 # tt 0.1.0
 
 - Added ggplot2 theme `theme_tmth()` that, along with'

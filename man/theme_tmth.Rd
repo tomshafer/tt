@@ -21,13 +21,13 @@ theme_tmth(
 
 \item{base_rect_size}{Foundational rectangle size}
 
-\item{aspect_ratio}{Foundational aspect ratio}
+\item{aspect_ratio}{Foundational aspect ratio (default: golden mean)}
 }
 \value{
 A new theme derived from \code{\link[ggplot2:ggtheme]{ggplot2::theme_bw()}}
 }
 \description{
-A \code{\link{ggplot2}} theme following some guidelines from the book
+A ggplot2 theme following some guidelines from the book
 \emph{Trees, maps, and theorems}.
 }
 \examples{
