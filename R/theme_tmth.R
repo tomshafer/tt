@@ -1,7 +1,7 @@
 
 #' _Trees, maps, and theorems_ plot theme
 #'
-#' A [ggplot2] theme following some guidelines from the book
+#' A ggplot2 theme following some guidelines from the book
 #' _Trees, maps, and theorems_.
 #'
 #' @param base_size Foundational font size
