@@ -1,5 +1,6 @@
 # Adapted from Michael Betancourt's Stan utilities.
-# https://raw.githubusercontent.com/betanalpha/knitr_case_studies/master/rstan_workflow/stan_utility.R
+# <https://raw.githubusercontent.com/betanalpha/knitr_case_studies/
+#   master/rstan_workflow/stan_utility.R>
 #
 #   The code in this case study is copyrighted by Columbia University
 #   and licensed under the new BSD (3-clause) license:
@@ -9,7 +10,7 @@
 #' Check whether [rstan][rstan::rstan] is installed
 test_for_rstan <- function() {
   if (!requireNamespace("rstan", quietly = TRUE)) {
-    stop("Package \"rstan\" must be installed to use this function.", call. = FALSE)
+    stop("Package \"rstan\" must be installed to use this function.", call. = F)
   }
 }
 
@@ -32,11 +33,11 @@ check_divergences <- function(fit) {
   divergent <- do.call(rbind, sampler_params)[, "divergent__"]
 
   n <- sum(divergent)
-  N <- length(divergent)
+  nn <- length(divergent)
 
   cat(sprintf(
     "%s of %s iterations ended with a divergence (%s%%).\n",
-    n, N, 100 * n / N
+    n, nn, 100 * n / nn
   ))
 
   if (n > 0) {
@@ -66,11 +67,11 @@ check_treedepth <- function(fit, max_depth = 10) {
   treedepths <- do.call(rbind, sampler_params)[, "treedepth__"]
 
   n <- length(treedepths[sapply(treedepths, function(x) x == max_depth)])
-  N <- length(treedepths)
+  nn <- length(treedepths)
 
   cat(sprintf(
     "%s of %s iterations saturated the maximum tree depth of %s (%s%%).",
-    n, N, max_depth, 100 * n / N
+    n, nn, max_depth, 100 * n / nn
   ))
 
   if (n > 0) {
@@ -98,8 +99,8 @@ check_energy <- function(fit) {
   sampler_params <- rstan::get_sampler_params(fit, inc_warmup = FALSE)
 
   no_warning <- TRUE
-  for (n in 1:length(sampler_params)) {
-    energies = sampler_params[n][[1]][, "energy__"]
+  for (n in seq_len(sampler_params)) {
+    energies <- sampler_params[n][[1]][, "energy__"]
 
     numer <- sum(diff(energies) ** 2) / length(energies)
     denom <- stats::var(energies)
@@ -113,7 +114,7 @@ check_energy <- function(fit) {
   if (no_warning) {
     cat("E-BFMI indicated no pathological behavior.\n")
   } else {
-    cat("E-BFMI below 0.2 indicates you may need to reparameterize your model.\n")
+    cat("E-BFMI below 0.2: You may need to reparameterize your model.\n")
   }
 
   invisible(as.integer(isFALSE(no_warning)))
@@ -135,11 +136,11 @@ check_n_eff <- function(fit) {
   test_for_rstan()
 
   fit_summary <- summary(fit, probs = c(0.5))$summary
-  N <- dim(fit_summary)[[1]]
+  nn <- dim(fit_summary)[[1]]
   iter <- dim(rstan::extract(fit)[[1]])[[1]]
 
   no_warning <- TRUE
-  for (n in 1:N) {
+  for (n in 1:nn) {
     ratio <- fit_summary[, 5][n] / iter
     if (ratio < 0.001) {
       cat(sprintf(
@@ -178,10 +179,10 @@ check_rhat <- function(fit) {
   test_for_rstan()
 
   fit_summary <- summary(fit, probs = c(0.5))$summary
-  N <- dim(fit_summary)[[1]]
+  nn <- dim(fit_summary)[[1]]
 
   no_warning <- TRUE
-  for (n in 1:N) {
+  for (n in 1:nn) {
     rhat <- fit_summary[, 6][n]
     if (rhat > 1.1 || is.infinite(rhat) || is.nan(rhat)) {
       cat(sprintf(
@@ -195,7 +196,7 @@ check_rhat <- function(fit) {
   if (no_warning) {
     cat("Rhat looks reasonable for all parameters.\n")
   } else {
-    cat("Rhat above 1.1 indicates that the chains very likely have not mixed.\n")
+    cat("Rhat above 1.1: The chains very likely have not mixed.\n")
   }
 
   invisible(as.integer(isFALSE(no_warning)))
@@ -242,7 +243,7 @@ partition_divergences <- function(fit) {
 
   params <- as.data.frame(do.call(
     rbind,
-    lapply(1:n_chains, function(n) nom_params[, n ,])
+    lapply(1:n_chains, function(n) nom_params[, n, ])
   ))
 
   sampler_params <- rstan::get_sampler_params(fit, inc_warmup = FALSE)

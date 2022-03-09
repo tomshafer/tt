@@ -24,7 +24,7 @@
 #' }
 theme_tmth <- function(
     base_size = 12,
-    base_family = "Source Sans Pro",
+    base_family = "Source Sans Pro",  # FIXME: Check if installed
     base_line_size = 0.4,
     base_rect_size = 0.4,
     aspect_ratio = 2 / (1 + sqrt(5))) {
@@ -38,19 +38,42 @@ theme_tmth <- function(
 
   line_color <- "gray50"
 
-  new_theme <- new_theme + ggplot2::theme(
+  new_theme <- new_theme +
+    ggplot2::theme(
       aspect.ratio = aspect_ratio,
-      plot.margin = ggplot2::unit(rep(12, 4), "pt"),
+      plot.margin = ggplot2::unit(
+        rep(12, 4),
+        units = "pt"
+      ),
       panel.border = ggplot2::element_blank(),
       panel.grid = ggplot2::element_blank(),
-      axis.ticks = ggplot2::element_line(color = line_color, lineend = "square"),
+      axis.ticks = ggplot2::element_line(
+        color = line_color,
+        lineend = "square"
+      ),
       axis.ticks.length = ggplot2::unit(-4, "pt"),
-      axis.line.x.bottom = ggplot2::element_line(color = line_color, lineend = "square"),
-      axis.text.x.bottom = ggplot2::element_text(color = line_color, margin = ggplot2::margin(t = 6)),
-      axis.title.x.bottom = ggplot2::element_text(margin = ggplot2::margin(t = 6)),
-      axis.line.y.left = ggplot2::element_line(color = line_color, lineend = "square"),
-      axis.text.y.left = ggplot2::element_text(color = line_color, margin = ggplot2::margin(r = 6)),
-      axis.title.y.left = ggplot2::element_text(margin = ggplot2::margin(r = 6))
+      axis.line.x.bottom = ggplot2::element_line(
+        color = line_color,
+        lineend = "square"
+      ),
+      axis.text.x.bottom = ggplot2::element_text(
+        color = line_color,
+        margin = ggplot2::margin(t = 6)
+      ),
+      axis.title.x.bottom = ggplot2::element_text(
+        margin = ggplot2::margin(t = 6)
+      ),
+      axis.line.y.left = ggplot2::element_line(
+        color = line_color,
+        lineend = "square"
+      ),
+      axis.text.y.left = ggplot2::element_text(
+        color = line_color,
+        margin = ggplot2::margin(r = 6)
+      ),
+      axis.title.y.left = ggplot2::element_text(
+        margin = ggplot2::margin(r = 6)
+      )
     )
 
   new_theme
