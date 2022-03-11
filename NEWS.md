@@ -1,7 +1,8 @@
-# tt 0.3.0 (Under Development)
+# tt (development version)
 
 - Added `check_for_packages()` to guard against missing "Suggests" packages.
-- Added `build_cmsdtan()` for building a fast version on macOS.
+- Added `build_cmdstan()` for building a fast version on macOS.
+- Added generics for `extract_divergences()` and `extract_treedepths()`.
 
 # tt 0.2.0
 

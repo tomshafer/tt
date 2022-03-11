@@ -7,7 +7,7 @@
 build_cmdstan()
 }
 \description{
-Build cmdstan with optimizations
+From the Stan forums (\href{https://discourse.mc-stan.org/t/speedup-by-using-external-blas-lapack-with-cmdstan-and-cmdstanr-py/25441/41}{link}).
 }
 \examples{
 \dontrun{
