@@ -16,5 +16,6 @@ Suggests:
     rmarkdown,
     ggplot2,
     lemon,
-    rstan
+    rstan,
+    cmdstanr
 VignetteBuilder: knitr

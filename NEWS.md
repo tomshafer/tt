@@ -1,3 +1,8 @@
+# tt 0.3.0 (Under Development)
+
+- Added `check_for_packages()` to guard against missing "Suggests" packages.
+- Added `build_cmsdtan()` for building a fast version on macOS.
+
 # tt 0.2.0
 
 - Added `with_cache()` for caching R operations.
