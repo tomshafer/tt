@@ -7,7 +7,7 @@
 ts_pdf_document(...)
 }
 \arguments{
-\item{...}{Arguments passed to \link[bookdown:pdf_document2]{bookdown::pdf_document2}}
+\item{...}{Arguments passed to \link[bookdown:html_document2]{bookdown::pdf_document2}}
 }
 \description{
 TODO: Create our own preprocessor to avoid setting so many options

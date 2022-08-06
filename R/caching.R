@@ -20,7 +20,7 @@
 #' }
 with_cache <- function(file, object, overwrite = FALSE, ...) {
   cache_fns <- get_cache_fns_from_ext(file)
-  if (isFALSE(file.exists(file)) | isTRUE(overwrite)) {
+  if (isFALSE(file.exists(file)) || isTRUE(overwrite)) {
     message("Caching object to ", file)
     cache_fns$write(object, file)
   }
@@ -39,9 +39,3 @@ get_cache_fns_from_ext <- function(path) {
   }
   list(read = readRDS, write = saveRDS)
 }
-
-
-
-
-
-

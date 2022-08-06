@@ -7,11 +7,11 @@
 #' @param ... Arguments passed to [bookdown::pdf_document2]
 #' @export
 ts_pdf_document <- function(...) {
-  if (!requireNamespace("bookdown", quietly = T))
+  if (!requireNamespace("bookdown", quietly = TRUE))
     stop("The 'bookdown' package is required to compile PDFs")
 
   dots <- list(...)
-  defaults <- c(toc = F, keep_md = F, keep_tex = T, number_section = F)
+  defaults <- c(toc = FALSE, keep_md = FALSE, keep_tex = TRUE, number_section = FALSE)
   for (key in names(defaults)) {
     if (!key %in% names(dots))
       dots[[key]] <- defaults[[key]]

@@ -4,7 +4,7 @@
 \alias{with_cache}
 \title{Cache and load an R object from disk}
 \usage{
-with_cache(file, object, overwrite = FALSE)
+with_cache(file, object, overwrite = FALSE, ...)
 }
 \arguments{
 \item{file}{Where to cache the R object.}
@@ -12,6 +12,8 @@ with_cache(file, object, overwrite = FALSE)
 \item{object}{An R object.}
 
 \item{overwrite}{Whether to overwrite the cached object.}
+
+\item{...}{Additional arguments for loading from cache.}
 }
 \value{
 The fresh/cached object.

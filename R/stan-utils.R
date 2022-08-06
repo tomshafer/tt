@@ -10,7 +10,7 @@
 #' Check whether [rstan][rstan::rstan] is installed
 test_for_rstan <- function() {
   if (!requireNamespace("rstan", quietly = TRUE)) {
-    stop("Package \"rstan\" must be installed to use this function.", call. = F)
+    stop("Package \"rstan\" must be installed to use this function.", call. = FALSE)
   }
 }
 

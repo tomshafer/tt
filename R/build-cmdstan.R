@@ -1,7 +1,9 @@
 
 #' Build cmdstan with optimizations
 #'
-#' From the Stan forums ([link](https://discourse.mc-stan.org/t/speedup-by-using-external-blas-lapack-with-cmdstan-and-cmdstanr-py/25441/41)).
+#' From the Stan forums (https://discourse.mc-stan.org/t/
+#' speedup-by-using-external-blas-lapack-with-cmdstan-and-cmdstanr-py/
+#' 25441/41).
 #'
 #' @export
 #'

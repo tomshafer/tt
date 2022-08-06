@@ -31,8 +31,8 @@ test_that("overwriting = TRUE works", {
   object <- 1 + 2
 
   # These should be the new value
-  expect_equal(with_cache(cache_files[1], 1 + 2, overwrite = T), object)
-  expect_equal(with_cache(cache_files[2], object, overwrite = T), object)
+  expect_equal(with_cache(cache_files[1], 1 + 2, overwrite = TRUE), object)
+  expect_equal(with_cache(cache_files[2], object, overwrite = TRUE), object)
 })
 
 
