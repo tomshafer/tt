@@ -1,4 +1,4 @@
-# tt (development version)
+# tt 0.3.0 (development)
 
 - Added `check_for_packages()` to guard against missing "Suggests" packages.
 - Added `build_cmdstan()` for building a fast version on macOS.

@@ -1,0 +1,50 @@
+#!/usr/bin/env sh
+
+# Copyright 2021 RStudio, PBC under the MIT License
+# https://github.com/rstudio/renv/blob/main/git/hooks/pre-commit
+
+
+set -e
+
+# Skip amends.
+if [ -z "${WINDIR}" ]; then
+	COMMAND="$(ps -p "${PPID}")"
+	if echo "${COMMAND}" | grep -Fq -e '--amend'; then
+		exit 0
+	fi
+fi
+
+# Skip hooks if requested.
+if [ -n "${GIT_NO_HOOKS}" ]; then
+	exit 0
+fi
+
+# Only tag commits made to main.
+REF="$(git rev-parse --abbrev-ref HEAD)"
+if [ ! "${REF}" = "main" ]; then
+	exit 0
+fi
+
+# Get version line
+LINE="$(grep "^Version:" DESCRIPTION)"
+VERSION="$(echo "${LINE}" | cut -d' ' -f2)"
+if [ -z "${VERSION}" ]; then
+	exit 0
+fi
+
+# Construct new version
+LHS="$(echo "${VERSION}" | cut -d'-' -f1)"
+RHS="$(echo "${VERSION}" | cut -d'-' -f2)"
+if [ "${LHS}" = "${RHS}" ]; then
+  RHS="0"
+fi
+
+# Bump the patch number
+: $((RHS+=1))
+
+# Replace the line in the DESCRIPTION
+REPLACEMENT="Version: ${LHS}-${RHS}"
+sed -i.backup "s/${LINE}/${REPLACEMENT}/g" DESCRIPTION
+rm DESCRIPTION.backup
+
+git add DESCRIPTION
