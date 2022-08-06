@@ -1,6 +1,6 @@
 Package: tt
 Title: Personal R Tools
-Version: 0.2.0-2
+Version: 0.2.0-3
 Authors@R: 
   person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
 Description: A collection of R tools for data science and other analysis.
@@ -8,15 +8,16 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Suggests: 
-    testthat,
     bookdown,
-    knitr,
-    rmarkdown,
-    ggplot2,
-    lemon,
-    rstan,
+    brms,
     cmdstanr,
-    brms
+    fst,
+    ggplot2,
+    knitr,
+    lemon,
+    rmarkdown,
+    rstan,
+    testthat
 VignetteBuilder: knitr
