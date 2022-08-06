@@ -3,7 +3,6 @@
 # Copyright 2021 RStudio, PBC under the MIT License
 # https://github.com/rstudio/renv/blob/main/git/hooks/pre-commit
 
-
 set -e
 
 # Skip amends.

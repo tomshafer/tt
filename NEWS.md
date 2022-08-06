@@ -3,6 +3,7 @@
 - Added `check_for_packages()` to guard against missing "Suggests" packages.
 - Added `build_cmdstan()` for building a fast version on macOS.
 - Added generics for `extract_divergences()` and `extract_treedepths()`.
+- Added [renv](https://github.com/rstudio/renv)'s Git hooks for version numbers.
 
 # tt 0.2.0
 
@@ -15,10 +16,8 @@
 
 # tt 0.1.0
 
-- Added ggplot2 theme `theme_tmth()` that, along with'
-  `lemon::coord_capped_cart()`, reproduces key elements of the style
-  advocated for in the book _Trees, maps, and theorems_.
-- Added a vignette demonstrting plotting.
+- Added ggplot2 theme `theme_tmth()` that, along with `lemon::coord_capped_cart()`, reproduces key elements of the style advocated for in the book _Trees, maps, and theorems_.
+- Added a vignette demonstrating plotting.
 - (Apparently, in the past) updated RMarkdown template.
 
 # tt 0.0.1
