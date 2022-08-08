@@ -4,6 +4,7 @@
 [![R-CMD-check](https://github.com/tomshafer/tt/workflows/R-CMD-check/badge.svg)](https://github.com/tomshafer/tt/actions)
 [![lint](https://github.com/tomshafer/tt/workflows/lint/badge.svg)](https://github.com/tomshafer/tt/actions)
 [![test-coverage](https://github.com/tomshafer/tt/workflows/test-coverage/badge.svg)](https://github.com/tomshafer/tt/actions)
+[![codecov](https://codecov.io/gh/tomshafer/tt/branch/main/graph/badge.svg?token=C80GLH2K3E)](https://codecov.io/gh/tomshafer/tt)
 <!-- badges: end -->
 
 This package bundles up a collection of R tools for data science
