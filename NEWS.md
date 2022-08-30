@@ -1,4 +1,7 @@
-# tt 0.4.0 (development)
+# tt 0.5.0 (development)
+
+- Refactored the `with_cache()` interface (`...` are no longer used).
+- Provided an option `tt.cache.prefer_data_table` to return fst-backed cache objects as data.tables.
 
 # tt 0.3.0
 

@@ -49,6 +49,10 @@ test_that("we cache to rds files if not fst", {
 
 test_that("we cache to fst if requested", {
   skip_if_not_installed("fst")
+  skip_if_not_installed("withr")
+
+  # Don't use data.table
+  withr::local_options(list(tt.cache.prefer_data_table = FALSE))
 
   for (ext in c("fst", "FST")) {
     cache_file <- tempfile(fileext = paste0(".", ext))
@@ -66,10 +70,22 @@ test_that("with_cache returns data.tables if requested", {
   skip_if_not_installed("fst")
   skip_if_not_installed("data.table")
 
+  withr::local_options(list(tt.cache.prefer_data_table = TRUE))
+
   cache_file <- tempfile(fileext = ".fst")
 
   expected <- data.table::data.table(i = seq_along(LETTERS), x = LETTERS)
-  cache <- with_cache(cache_file, expected, as.data.table = TRUE)
+  cache <- with_cache(cache_file, expected)
 
   expect_equal(expected, cache)
+})
+
+
+test_that("with_cache warns when dots are provided", {
+  cache_file <- tempfile()
+  expect_warning(
+    with_cache(cache_file, 1, other.arg.should.warn = 1),
+    "with_cache() no longer uses arguments provided via `...`",
+    fixed = TRUE
+  )
 })

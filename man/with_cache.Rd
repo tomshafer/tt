@@ -7,13 +7,13 @@
 with_cache(file, object, overwrite = FALSE, ...)
 }
 \arguments{
-\item{file}{Where to cache the R object.}
+\item{file}{Where to cache the R object}
 
-\item{object}{An R object.}
+\item{object}{An R object}
 
-\item{overwrite}{Whether to overwrite the cached object.}
+\item{overwrite}{Whether to overwrite the cached object}
 
-\item{...}{Additional arguments for loading from cache.}
+\item{...}{Unused, will warn}
 }
 \value{
 The fresh/cached object.
