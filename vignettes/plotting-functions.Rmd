@@ -28,7 +28,7 @@ head(mtcars)
 ```{r}
 ggplot(mtcars) +
   geom_point(aes(wt, mpg)) +
-  scale_x_continuous(limits = c(1, 6), breaks = seq(1, 6)) + 
+  scale_x_continuous(limits = c(1, 6), breaks = seq(1, 6)) +
   scale_y_continuous(limits = c(10, 35)) +
   theme_tmth() +
   coord_capped_cart(left = "both", bottom = "both")

@@ -22,7 +22,7 @@ editor_options:
 
 ```{r setup, include = F}
 knitr::opts_chunk$set(
-  echo = TRUE, message = FALSE, warning = TRUE, error = FALSE, 
+  echo = TRUE, message = FALSE, warning = TRUE, error = FALSE,
   comment = "#>", fig.asp = 0.618, fig.align = "center",
   fig.show = "hold", fig.width = 6, out.width = "60%"
 )
