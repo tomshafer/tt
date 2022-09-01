@@ -1,6 +1,6 @@
 Package: tt
 Title: Personal R Tools
-Version: 0.4.0-5
+Version: 0.4.0-6
 Authors@R: 
   person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
 Description: A collection of R tools for data science and other analysis.
@@ -23,3 +23,5 @@ Suggests:
     testthat,
     withr
 VignetteBuilder: knitr
+Additional_repositories:
+    https://mc-stan.org/r-packages
