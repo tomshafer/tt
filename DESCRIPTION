@@ -1,6 +1,6 @@
 Package: tt
 Title: Personal R Tools
-Version: 0.4.0-6
+Version: 0.4.0-7
 Authors@R: 
   person("Tom", "Shafer", email = "tom@tshafer.com", role = c("aut", "cre"))
 Description: A collection of R tools for data science and other analysis.
