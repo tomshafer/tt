@@ -23,5 +23,7 @@ Suggests:
     testthat,
     withr
 VignetteBuilder: knitr
-Additional_repositories:
-    https://mc-stan.org/r-packages
+Remotes:
+  stan-dev/brms@*release,
+  stan-dev/cmdstanr@*release,
+  stan-dev/rstan@*release
