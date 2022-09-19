@@ -23,6 +23,5 @@ Suggests:
     testthat,
     withr
 VignetteBuilder: knitr
-Remotes:
-  stan-dev/cmdstanr@*release,
-  stan-dev/rstan/rstan/rstan@*release
+Additional_repositories:
+    https://mc-stan.org/r-packages/
