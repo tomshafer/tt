@@ -23,5 +23,7 @@ jobs:
         with:
           extra-packages: lintr
       - name: Lint
-        run: lintr::lint_package()
+        run: |
+            pkgload::load_all()
+            lintr::lint_package()
         shell: Rscript {0}
