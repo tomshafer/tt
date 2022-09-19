@@ -25,4 +25,4 @@ Suggests:
 VignetteBuilder: knitr
 Remotes:
   stan-dev/cmdstanr@*release,
-  stan-dev/rstan/rstan@*release
+  stan-dev/rstan/rstan/rstan@*release
