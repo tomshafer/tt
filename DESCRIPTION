@@ -24,6 +24,5 @@ Suggests:
     withr
 VignetteBuilder: knitr
 Remotes:
-  stan-dev/brms@*release,
   stan-dev/cmdstanr@*release,
-  stan-dev/rstan@*release
+  stan-dev/rstan/rstan@*release
