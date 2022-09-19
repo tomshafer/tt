@@ -6,10 +6,10 @@ on:
   pull_request:
     branches: [main, master]
 
-name: test-coverage
+name: coverage
 
 jobs:
-  test-coverage:
+  coverage:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
